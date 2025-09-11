@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.form-container {
+  width: 500px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 10px;
+}
+
+.form-container h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.section {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.blue {
+  background-color: #6d9bf1;
+}
+
+.gray {
+  background-color: #999999;
+  color: #fff;
+}
+
+.section label {
+  display: inline-block;
+  width: 90px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.section input,
+.section select {
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.buttons {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.buttons input {
+  padding: 6px 12px;
+  margin-right: 10px;
+  border: 1px solid #666;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.buttons input:hover {
+  background-color: #ddd;
+}
