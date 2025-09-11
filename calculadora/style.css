@@ -1,68 +1,96 @@
 body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-background);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #f3f3f3;
-  font-family: Arial, sans-serif;
+  margin: 0;
 }
 
-.calculator {
-  background: #fff;
+:root {
+  --color-background: rgb(71, 87, 107);
+  --color-box-calculator: #4f5f73;
+  --color-operation: #8c4b45;
+  --color-operation-hover: #85453f;
+  --color-display: #a3a9b0;
+  --color-operation-active: #723b36;
+}
+
+.main {
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  width: 300px;
-}
-
-#display {
-  width: 100%;
-  height: 60px;
-  margin-bottom: 15px;
-  text-align: right;
-  font-size: 24px;
-  padding: 10px;
-  border: none;
-  background: #eee;
+  background-color: var(--color-box-calculator);
   border-radius: 10px;
+  box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.2);
 }
 
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
+  margin-top: 10px;
+  width: 100%;
 }
 
 button {
-  height: 60px;
+  padding: 18px;
   font-size: 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
+  background-color: white;
   cursor: pointer;
-  transition: 0.2s;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 60px;
 }
 
 button:hover {
-  transform: scale(1.05);
+  background-color: #d9d9d9;
 }
 
-.operator {
-  background: #ff9f43;
-  color: #fff;
+button:active {
+  background-color: #afafaf;
 }
 
-.equal {
-  background: #2ecc71;
-  color: #fff;
-  grid-column: span 2;
+#calculator {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.clear {
-  background: #e74c3c;
-  color: #fff;
-  grid-column: span 2;
+#display {
+  height: 60px;
+
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
 }
 
-.number {
-  background: #dfe6e9;
+.operation {
+  background-color: var(--color-operation);
+  color: black;
+}
+
+.operation:hover {
+  background-color: var(--color-operation-hover);
+}
+
+.operation:active {
+  background-color: var(--color-operation-active);
+}
+
+.limpar {
+  background-color: var(--color-operation);
+  color: black;
+  grid-column: span 4;
+}
+
+.limpar:hover {
+  background-color: var(--color-operation-hover);
+}
+
+.limpar:active {
+  background-color: var(--color-operation-active);
 }
