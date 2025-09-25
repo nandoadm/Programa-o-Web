@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <p>Teste 1</p>
-  </body>
+</body>
 
-  <?php
-  define("nome", "Fernando"); //constante
-  $nomeVar = "Fernando"; //variável
-  $var1 = 10; //inteiro
-  $var2 = 10.5; //float
+<?php
+//define("nome","Fernando");
+//define("sobrenome","Thiago");
 
-  echo "<p>$var1</p>";
-  echo "<p>$nomeVar</p>";  
-  echo gettype($var1);
+const nome = "Fernando";
+const sobrenome = "Thiago";
+
+$var1 = nome. " " .sobrenome;
+
+echo $var1;
   ?>
 
 </html>
