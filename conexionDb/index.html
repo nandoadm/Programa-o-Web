@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .card {
+        max-width: 640px;
+        margin: 40px auto;
+        padding: 18px;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+
+      .card h2 {
+        margin: 0 0 12px 0;
+        font-size: 18px;
+        color: #222;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .form-row {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        font-size: 14px;
+        color: #444;
+        margin-bottom: 6px;
+        font-weight: 600;
+      }
+
+      input,
+      select {
+        padding: 10px 12px;
+        border: 1px solid #e6e6e6;
+        border-radius: 6px;
+        font-size: 14px;
+        color: #333;
+        background: #fff;
+      }
+
+      .actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-top: 8px;
+      }
+
+      button {
+        padding: 10px 14px;
+        border: none;
+        border-radius: 6px;
+        background: #0366d6;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      button.secondary {
+        background: #f1f1f1;
+        color: #333;
+      }
+
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      .data-table th,
+      .data-table td {
+        padding: 10px 12px;
+        vertical-align: middle;
+        word-wrap: break-word;
+      }
+
+      .data-table th {
+        width: 36%;
+        text-align: left;
+        background: #f6f8fa;
+        color: #333;
+        font-weight: 600;
+        border-right: 1px solid #eee;
+      }
+
+      .data-table td {
+        background: #fff;
+        color: #555;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      @media (max-width: 480px) {
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .data-table th {
+          display: block;
+          width: 100%;
+          border-right: none;
+          border-bottom: 1px solid #eee;
+        }
+        .data-table td {
+          display: block;
+          width: 100%;
+          border-bottom: 1px solid #eee;
+        }
+        .data-table tr {
+          margin-bottom: 10px;
+          display: block;
+        }
+      }
+    </style>
+
+    <form
+      class="card"
+      role="form"
+      aria-label="Formulário de dados"
+      id="personForm"
+    >
+      <h2>Editar Dados da Pessoa</h2>
+
+      <div class="form-grid">
+        <div class="form-row">
+          <label for="nome">Nome</label>
+          <input
+            id="nome"
+            name="nome"
+            type="text"
+            placeholder="João"
+            required
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="sobrenome">Sobrenome</label>
+          <input
+            id="sobrenome"
+            name="sobrenome"
+            type="text"
+            placeholder="da Silva"
+            required
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="exemplo@dominio.com"
+            required
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="senha">Senha</label>
+          <input
+            id="senha"
+            name="senha"
+            type="password"
+            placeholder="••••••••"
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="cidade">Cidade</label>
+          <input
+            id="cidade"
+            name="cidade"
+            type="text"
+            placeholder="São Paulo"
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="estado">Estado</label>
+          <select id="estado" name="estado">
+            <option value="">Selecione</option>
+            <option value="SP">SP</option>
+            <option value="RJ">RJ</option>
+            <option value="MG">MG</option>
+            <option value="BA">BA</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button
+          type="button"
+          class="secondary"
+          onclick="document.getElementById('personForm').reset()"
+        >
+          Limpar
+        </button>
+        <button type="submit">Salvar</button>
+      </div>
+    </form>
+
+    <div class="card" role="region" aria-label="Dados da pessoa">
+      <h2>Dados da Pessoa</h2>
+      <table class="data-table" role="table">
+        <tbody>
+          <tr>
+            <th scope="row">Nome</th>
+            <td>Joao</td>
+          </tr>
+          <tr>
+            <th scope="row">Sobrenome</th>
+            <td>bla</td>
+          </tr>
+          <tr>
+            <th scope="row">Email</th>
+            <td>bla@gmail.com</td>
+          </tr>
+          <tr>
+            <th scope="row">Senha</th>
+            <td>123</td>
+          </tr>
+          <tr>
+            <th scope="row">Cidade</th>
+            <td>Sao Paulo</td>
+          </tr>
+          <tr>
+            <th scope="row">Estado</th>
+            <td>SP</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
