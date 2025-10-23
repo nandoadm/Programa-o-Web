@@ -16,8 +16,7 @@ if ($connection) {
 
 
     $dadosPessoa = array(
-        "pesnome" => "Joao",
-        "pessobrenome" => "bla",
+F        "pessobrenome" => "bla",
         "pesemail" => "bla@gmail.com",
         "pespassword" => "123",
         "pescidade" => "Sao Paulo",
